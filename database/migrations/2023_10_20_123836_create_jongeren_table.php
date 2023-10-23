@@ -12,9 +12,7 @@ return new class extends Migration {
             $table->string("Name");
             $table->date("Birthday");
             $table->string("Gender");
-            $table->foreignId("instituut_id")->constrained("instituut");
-
-
+            $table->string("Address");
 
             $table->timestamps();
         });

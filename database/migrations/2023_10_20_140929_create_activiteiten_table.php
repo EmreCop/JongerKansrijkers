@@ -13,8 +13,7 @@ return new class extends Migration {
             $table->string("Description");
             $table->dateTime("StartDate");
             $table->dateTime("EndDate");
-            $table->foreignId("User_id")->constrained("users");
-
+            $table->string("Location");
         });
     }
 
