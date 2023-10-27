@@ -14,7 +14,11 @@ return new class extends Migration {
             $table->dateTime("StartDate");
             $table->dateTime("EndDate");
             $table->string("Location");
-        });
+            $table->foreignId("jongerenId")->constrained("jongeren");
+            $table->foreignId("UserId")->constrained("users");
+            $table->timestamps();
+         });
+
     }
 
     public function down(): void

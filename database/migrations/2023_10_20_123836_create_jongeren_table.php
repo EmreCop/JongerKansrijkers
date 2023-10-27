@@ -13,7 +13,10 @@ return new class extends Migration {
             $table->date("Birthday");
             $table->string("Gender");
             $table->string("Address");
-
+            $table->string("City");
+            $table->string("Zipcode");
+            $table->foreignId("InstituutId")->constrained("instituut");
+    
             $table->timestamps();
         });
     }
